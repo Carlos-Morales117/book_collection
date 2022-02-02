@@ -2,9 +2,11 @@
 
 <h2>Delete book</h2>
 
+
+
 <%= form_for(@book, :method => 'delete') do |f| %>
-<p>Are you sure you want to delete this subject?</p>
-<p><%= @book %> </p>
+<p>Are you sure you want to delete the book <%= @book.title %>?</p>
+<p></p>
 
 
 <div class="form-buttons">
@@ -15,5 +17,5 @@
 </div>
 
 <br /> 
-<%= link_to 'Back', delete_book_path %>
+<%= link_to 'Back', books_path %>
 
