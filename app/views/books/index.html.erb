@@ -5,13 +5,13 @@
 <table>
   <thead>
     <tr>
-      <th>We made it onto Heroku! </th> 
-      <br><br>
+
       <th>Title</th>
       <th>Author</th>
       <th>Price</th>
       <th>Published date</th>
       <th colspan="3"></th>
+      
     </tr>
   </thead>
 
@@ -24,7 +24,8 @@
         <td><%= book.published_date %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to("Delete", delete_book_path(book), :class => 'action delete') %></td>
+
       </tr>
     <% end %>
   </tbody>
